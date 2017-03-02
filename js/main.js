@@ -85,21 +85,17 @@ bookmarksResults.innerHTML="";
  }
 }
 //Validate form
-function validateForm(siteName,siteUrl){
-	if(!siteName||!siteUrl){
+function validateForm(siteName,siteUrl) {
+  if (!siteName || !siteUrl) {
 	alert("Please fill in the form");
 	return false;
 
-}
-var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-var regex = new RegExp(expression);
-if(!siteUrl.match(regex)){
+  }
+  var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+  var regex = new RegExp(expression);
+  if (!siteUrl.match(regex)) {
 	alert('Please use a valid Url');
 	return false;
+  }
+  return true;
 }
-return true;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 9352174c52e1c857381b54a5ede9675cab9775ad
