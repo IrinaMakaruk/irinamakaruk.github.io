@@ -78,8 +78,8 @@ bookmarksResults.innerHTML="";
  	var url=bookmarks[i].url;
  	bookmarksResults.innerHTML+='<div class="well">'+
  	                            '<h3>'+name+
- 	                            '<a class="btn btn-default" target="_blank" href="'+url+'">Visit</a>'+
- 	                            '<a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a>'
+ 	                            '<a class="btn btn-default" target="_blank" href="'+url+'">GO</a>'+
+ 	                            '<a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Del</a>'
  	                            '</h3>'+
  	                            '</div>';
  }
