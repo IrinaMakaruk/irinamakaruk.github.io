@@ -4,15 +4,8 @@ document.getElementById("myForm").onclick=function(){
 	addEventListener('submit',saveBookmark);
 	addEventListener('submit',block_show);};
 function block_show(){
-<<<<<<< HEAD
-	if(document.getElementById("well")){
-	 $("#well").animate({height: 'show'}, 500); 
-	}
-}
-=======
 	 $(".well").animate({height: 'show'}, 500); 
 	}
->>>>>>> 47d9bcf5d7f1449d9556c7ad93149eb8869f7023
 //save Bookmark
 function saveBookmark(e){
 //Get form values"
@@ -110,13 +103,9 @@ function validateForm(siteName,siteUrl) {
 	return false;
   }
   return true;
-<<<<<<< HEAD
 
 }
 
 
-
-=======
 }
 }
->>>>>>> 47d9bcf5d7f1449d9556c7ad93149eb8869f7023
