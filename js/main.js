@@ -4,15 +4,10 @@ document.getElementById("myForm").onclick=function(){
 	addEventListener('submit',saveBookmark);
 	addEventListener('submit',block_show);};
 function block_show(){
-<<<<<<< HEAD
-	
 	 $(".well").animate({height: 'show'}, 500); 
-	
-=======
 	if(document.getElementById("well")){
 	 $("#well").animate({height: 'show'}, 500); 
 	}
->>>>>>> df33011bc0820081166832c370fb138b609fbe35
 }
 //save Bookmark
 function saveBookmark(e){
@@ -90,11 +85,8 @@ bookmarksResults.innerHTML="";
  for(var i=0; i<bookmarks.length; i++){
  	var name=bookmarks[i].name;
  	var url=bookmarks[i].url;
-<<<<<<< HEAD
  	bookmarksResults.innerHTML+='<div class="well">' +
-=======
  	bookmarksResults.innerHTML+='<div id="well" class="well" style="display: none;">'+
->>>>>>> df33011bc0820081166832c370fb138b609fbe35
  	                            '<h3>'+name+
  	                            '<a class="btn btn-default" target="_blank" href="'+url+'">GO</a>'+
  	                            '<a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Del</a>'
