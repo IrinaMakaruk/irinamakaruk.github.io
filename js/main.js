@@ -107,5 +107,4 @@ function validateForm(siteName,siteUrl) {
 }
 
 
-}
-}
+
