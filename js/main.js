@@ -4,10 +4,15 @@ document.getElementById("myForm").onclick=function(){
 	addEventListener('submit',saveBookmark);
 	addEventListener('submit',block_show);};
 function block_show(){
+<<<<<<< HEAD
 	if(document.getElementById("well")){
 	 $("#well").animate({height: 'show'}, 500); 
 	}
 }
+=======
+	 $(".well").animate({height: 'show'}, 500); 
+	}
+>>>>>>> 47d9bcf5d7f1449d9556c7ad93149eb8869f7023
 //save Bookmark
 function saveBookmark(e){
 //Get form values"
@@ -89,19 +94,14 @@ bookmarksResults.innerHTML="";
  	                            '<a class="btn btn-default" target="_blank" href="'+url+'">GO</a>'+
  	                            '<a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Del</a>'
  	                            '</h3>'+
- 	                            '</div>';
- 	
-   
- 	                           
+ 	                            '</div>'; 	                           
  }
 }
-
 //Validate form
 function validateForm(siteName,siteUrl) {
   if (!siteName || !siteUrl) {
 	alert("Please fill in the form");
 	return false;
-
   }
   var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
   var regex = new RegExp(expression);
@@ -110,8 +110,13 @@ function validateForm(siteName,siteUrl) {
 	return false;
   }
   return true;
+<<<<<<< HEAD
 
 }
 
 
 
+=======
+}
+}
+>>>>>>> 47d9bcf5d7f1449d9556c7ad93149eb8869f7023
