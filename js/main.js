@@ -5,10 +5,7 @@ document.getElementById("myForm").onclick=function(){
 	addEventListener('submit',block_show);};
 function block_show(){
 	 $(".well").animate({height: 'show'}, 500); 
-	if(document.getElementById("well")){
-	 $("#well").animate({height: 'show'}, 500); 
 	}
-}
 //save Bookmark
 function saveBookmark(e){
 //Get form values"
@@ -85,7 +82,6 @@ bookmarksResults.innerHTML="";
  for(var i=0; i<bookmarks.length; i++){
  	var name=bookmarks[i].name;
  	var url=bookmarks[i].url;
- 	bookmarksResults.innerHTML+='<div class="well">' +
  	bookmarksResults.innerHTML+='<div id="well" class="well" style="display: none;">'+
  	                            '<h3>'+name+
  	                            '<a class="btn btn-default" target="_blank" href="'+url+'">GO</a>'+
