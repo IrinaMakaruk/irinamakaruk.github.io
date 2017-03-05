@@ -1,5 +1,13 @@
+
 //listen for form Submit
-document.getElementById("myForm").addEventListener('submit',saveBookmark);
+document.getElementById("myForm").onclick=function(){
+	addEventListener('submit',saveBookmark);
+	addEventListener('submit',block_show);};
+function block_show(){
+	if(document.getElementById("well")){
+	 $("#well").animate({height: 'show'}, 500); 
+	}
+}
 //save Bookmark
 function saveBookmark(e){
 //Get form values"
@@ -68,7 +76,7 @@ function fetchBookmarks(){
 //Get bookmarks from LocalStorage
 	var bookmarks= JSON.parse(localStorage.getItem('bookmarks'));
 
-//Het output Id
+//Get output Id
 var bookmarksResults=document.getElementById("bookmarksResults");
 
 //Build output
@@ -76,14 +84,18 @@ bookmarksResults.innerHTML="";
  for(var i=0; i<bookmarks.length; i++){
  	var name=bookmarks[i].name;
  	var url=bookmarks[i].url;
- 	bookmarksResults.innerHTML+='<div class="well">'+
+ 	bookmarksResults.innerHTML+='<div id="well" class="well" style="display: none;">'+
  	                            '<h3>'+name+
  	                            '<a class="btn btn-default" target="_blank" href="'+url+'">GO</a>'+
  	                            '<a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Del</a>'
  	                            '</h3>'+
  	                            '</div>';
+ 	
+   
+ 	                           
  }
 }
+
 //Validate form
 function validateForm(siteName,siteUrl) {
   if (!siteName || !siteUrl) {
