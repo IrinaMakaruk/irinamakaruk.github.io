@@ -87,19 +87,14 @@ bookmarksResults.innerHTML="";
  	                            '<a class="btn btn-default" target="_blank" href="'+url+'">GO</a>'+
  	                            '<a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Del</a>'
  	                            '</h3>'+
- 	                            '</div>';
- 	
-   
- 	                           
+ 	                            '</div>'; 	                           
  }
 }
-
 //Validate form
 function validateForm(siteName,siteUrl) {
   if (!siteName || !siteUrl) {
 	alert("Please fill in the form");
 	return false;
-
   }
   var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
   var regex = new RegExp(expression);
@@ -108,8 +103,5 @@ function validateForm(siteName,siteUrl) {
 	return false;
   }
   return true;
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> df33011bc0820081166832c370fb138b609fbe35
